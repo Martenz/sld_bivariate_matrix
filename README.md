@@ -21,7 +21,7 @@ Doc:
     
     **concat((round( "field_1" /(100/(N-1)))), '_', (round( "field_2" /(100/(N-1)))))**
 
-# <a href="#">Demo</a>
+# <a href="https://martenz.github.io/sld_bivariate_matrix/">Demo</a>
 
 
 
