@@ -1,0 +1,119 @@
+.matrix_table{
+    margin:auto;
+    text-align: center;
+    font-size: 1rem;
+    /*text-shadow: 1px 1px 1px black;*/
+}
+
+.matrix_table tr{
+}
+
+.matrix_table td{
+    height: 3rem;
+    width: 3rem;
+    padding: 3px;
+    margin: 0;
+    background-color:silver;
+    border:0px solid;
+    color:black;
+}
+
+/*.matrix_table:before{*/
+/*    content: "y.100%";*/
+/*    position: absolute;*/
+/*    height: 30px;*/
+/*    width: 15px;*/
+/*    margin-left: -18px;*/
+/*    margin-top: -38px;*/
+    /*border-left: 10px solid transparent;*/
+    /*border-right: 10px solid transparent;*/
+    /*border-bottom: 10px solid #545454;*/
+/*    color: black;*/
+/*    font-size: 0.75rem;*/
+/*}*/
+
+.matrix_table tr:before{
+        content: "";
+    position: relative;
+    width: 10px;
+    height: 10px;
+    font-size: 0.75rem;
+    left: -4rem;
+    margin-right: -3rem;
+}
+
+.matrix_table tr:first-child:before{
+        content: "y.100%";
+    position: relative;
+    width: 10px;
+    height: 10px;
+    font-size: 0.75rem;
+    left: -4rem;
+    margin-right: -3rem;
+    top:-20px;
+}
+
+.matrix_table tr:last-child:before{
+        content: "xy.0%";
+    position: relative;
+    width: 10px;
+    height: 10px;
+    font-size: 0.75rem;
+    left: -4rem;
+    margin-right: -3rem;
+    top:1rem;
+}
+
+
+.xy_axes{
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    border-right:0px;
+    border-top:0px;
+}
+
+.matrix_table tr:last-child:after{
+    content: "x.100%";
+    position: relative;
+    width: 10px;
+    height: 10px;
+    font-size: 0.75rem;
+    left: 1rem;
+    margin-right: -3rem;
+    top: 1rem;
+}
+
+#projects{
+    display:none;
+}
+
+.row_colors{
+    text-align: center;
+    padding:15px;
+}
+
+.row_colors input{
+    width: 20%;
+    margin-left: 5px;
+}
+
+.row_colors input[type='checkbox']{
+    width:100%;
+}
+
+.col-6 input{
+    max-width: 100px;
+}
+
+#output{
+    display:none;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+    margin:0;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    font-size:0.25rem;
+}

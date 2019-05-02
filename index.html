@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>CSS To SLD - Matrix</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/spectrum.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">CSS 2 SLD Matrix</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">CSS 2 SLD Matrix</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">
+          A free SLD Matrix TWO DIMENSIONS FEATURES INDICATORs styler.
+          <br>
+          <b>Generate your sld categorized style based on two indicators spanning 0-100% each classified in X and Y classes.</b>
+        </h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Define X & Y classes</h2>
+          
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Number X Classes (0-100)</span>
+            </div>
+            <input id="cols" type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" min="3" max="100" value=3>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Number Y Classes (0-100)</span>
+            </div>
+            <input id="rows" type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" min="3" max="100" value=3>
+          </div>
+
+            <button id="generate_matrix" class="btn btn-info">Create Matrix</button>
+            <br></br>
+          
+        </div>
+      </div>
+      <!--<img src="img/ipad.png" class="img-fluid" alt="">-->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+      
+    <h4>Matrix Corner Colors Option (Double Click cells to edit the label)</h4>
+    
+      <hr></hr>
+
+      <div class="row row_colors">
+       <div class="col-3"></div>
+       <div class="col-6"><input type='text' id="left_top_color" /><input type='text' id="right_top_color" /></div>
+       <div class="col-3"><p><i class="fas fa-2x fa-image">&nbsp;</i>Preview</p></div>
+      </div>     
+
+      <div class="row row_colors">
+        <div class="col-3">
+          Remove Axes <input id="remove-axes" class="form-control" type="checkbox" name="removeAxes" value="0"/>
+        </div>
+        <div class="col-6">
+         <div id="matrix"></div>
+        </div>
+        <div class="col-3">
+         <div id="img-out"></div>
+        </div>
+      </div>
+
+    <div class="row row_colors">
+     <div class="col-3"></div>
+     <div class="col-6"><input type='text' id="left_bottom_color" /><input type='text' id="right_bottom_color" /></div>
+     <div class="col-3"></div>
+    </div>
+    
+    <div class="row row_colors">
+        <div class="col-3">
+        </div>
+        <div class="col-6">
+          <button class="btn btn-info" type="button" id="btnSave">Generate PNG</button>  
+        </div>
+        <div class="col-3">
+          <div id='download-button'></div>
+        </div>
+    </div>
+    
+    <hr></hr>
+      <div class="row">
+        <div class="col-6">
+          RGB <input class="form-control" type="radio" name="intype" value="interpolateColor" checked />
+        </div>
+        <div class="col-6">
+          HSL <input class="form-control" type="radio" name="intype" value="interpolateHSL" />
+        </div>
+      </div>
+    <hr></hr>
+      <div class="row">
+        <div class="col-6">
+          Interpolate by rows <input class="form-control" type="radio" name="interpolate" value="rows" checked />
+        </div>
+        <div class="col-6">
+          Interpolate by cols <input class="form-control" type="radio" name="interpolate" value="cols"/>
+        </div>
+      </div>
+      <hr></hr>
+    
+    <h4>Stroke Option</h4>
+
+      <div class="row row_colors">
+       <div class="col-6">Color<input type='text' id="stroke_color"/></div>
+       <div class="col-6">Width<input type='number' id="stroke_width" step="0.1" min="0" value="0"/></div>
+      </div>     
+
+    <hr></hr>
+    
+    <h4>Export SLD</h4>
+    
+    Layer Name:<input type='text' id="layer_name" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
+    Matrix ID Field: <input type='text' id="layer_id_field_name" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
+    <br></br>  
+    <button id="generate_sld" class="btn btn-info">Generate SLD</button>
+    <br></br>
+    
+    <div id="output">
+    <h4>
+      To apply the syle correctly you should add a new fiel to your layer named '<b class='btn btn-light' id="layer_id_field_name_defined"><missing-layer-name></b>'
+      values for this attribute should match the combination of the two dimension values as:
+    </h4>
+    <br></br>
+      <p>Value 1 [0-100] as string, rounded to the number of classes defined above (cols)</p>
+      <p>Value 2 [0-100] as string, rounded to the number of classes defined above (rows)</p>
+      <br>
+      <p>==> eg Cell (5,10) i.e. Value 1 = 5% , Value 2 = 10% ==> becomes 5_10</p>
+      <p>==> eg Cell (100,100) i.e. Value 1 = 100% , Value 2 = 100% ==> becomes 100_100</p>
+    
+    <p>Eg. QGIS Classification - field Calculation: (N:steps, fields from 0 to 100% values)</p>
+    <ul>
+      <li>
+      <code>(0-100) stright axes | <b>concat((round( "field_1" /(100/(N-1)))), '_', (round( "field_2" /(100/(N-1)))))</b></code>
+      </li>
+      <li>
+      <code>(100-0) reverse axes | <b>concat((round((N-1) -  "field_1" /(100/(N-1)))), '_', (round((N-1) -"field_2" /(100/(N-1)))))</b></code>
+      </li>
+      <li>
+      <code>mixed order axes | <b>concat((round("field_1" /(100/(N-1)))), '_', (round((N-1) -"field_2" /(100/(N-1)))))</b></code>
+      </li>
+    </ul>
+
+    <hr></hr>
+
+    <textarea rows="20" cols="50" id="sld_output" class="form-control" ></textarea>
+    </div>
+    
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+     
+
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Your Website 2019
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/spectrum.js"></script>
+
+  <!-- Custom scripts for this template  https://coderwall.com/p/z8uxzw/javascript-color-blender -->
+  <script src="js/interpolate_colors.js"></script>
+
+  <!-- Custom scripts for this template  https://github.com/trendct/Trendy.js/blob/master/Trendy.js -->
+  <script src="js/Trendy.js"></script>
+
+  <!-- Custom scripts for this template  https://github.com/hongru/canvas2image/blob/master/canvas2image.js -->
+  <script src="js/html2canvas.js"></script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
