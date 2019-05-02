@@ -21,7 +21,7 @@ Doc:
     
     **concat((round( "field_1" /(100/(N-1)))), '_', (round( "field_2" /(100/(N-1)))))**
 
-# <a href="https://martenz.github.io/sld_bivariate_matrix/">Demo</a>
+# <a target="_blank" href="https://martenz.github.io/sld_bivariate_matrix/">Demo</a>
 
 
 
@@ -29,9 +29,9 @@ Doc:
 
 - jQuery
 - Bootstrap 4.0 (<a href='https://startbootstrap.com/themes/grayscale/'>GreyScale template</a>)
-- <a href='https://github.com/adobe/spectrum-css'>Spectrum-css</a>
-- <a href='https://github.com/trendct/Trendy.js/blob/master/Trendy.js'>Trendy.js</a>
-- <a href='https://github.com/hongru/canvas2image/blob/master/canvas2image.js'>html2canvas.js</a>
-- <a href='https://coderwall.com/p/z8uxzw/javascript-color-blender'>interpolate_colors.js</a>
+- <a target="_blank" href='https://github.com/adobe/spectrum-css'>Spectrum-css</a>
+- <a target="_blank" href='https://github.com/trendct/Trendy.js/blob/master/Trendy.js'>Trendy.js</a>
+- <a target="_blank" href='https://github.com/hongru/canvas2image/blob/master/canvas2image.js'>html2canvas.js</a>
+- <a target="_blank" href='https://coderwall.com/p/z8uxzw/javascript-color-blender'>interpolate_colors.js</a>
 
 
