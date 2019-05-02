@@ -19,7 +19,7 @@ Doc:
 
   * eg. for 2 fields spanning 0 - 100 % using field calculator in QGIS:
     
-    concat((round( "field_1" /(100/(N-1)))), '_', (round( "field_2" /(100/(N-1)))))
+    **concat((round( "field_1" /(100/(N-1)))), '_', (round( "field_2" /(100/(N-1)))))**
 
 # <a href="#">Demo</a>
 
